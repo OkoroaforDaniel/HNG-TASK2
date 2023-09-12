@@ -1,0 +1,273 @@
+.background-container{
+    background-image: url('../assets/Poster.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.JohnWickH1 h1{
+    font-family: "DM Sans", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: 0em;
+    text-align: left;
+    
+}
+.TextRectangle{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 200px;
+}
+.NavBar{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+.tvMovie{
+    display: flex;
+    /* justify-content: space-between; */
+    color: white;
+}
+.tvMovie p{
+    margin-left: 20px;
+    font-family: "DM Sans", sans-serif;
+}
+.signMenu{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.signMenu p{
+    margin-right: 20px;
+    font-family: "DM Sans", sans-serif;
+    margin-top: 5px;
+}
+.Menu{
+    width: 36px;
+    height: 36px;
+}
+.tv{
+    width: 50px;
+    height: 50px;
+}
+.SearchInput{
+    width: 500px;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 
+    #D1D5DB 1px;
+    background: transparent;
+}
+.SearchInput::placeholder{
+    color: #D1D5DB;
+}
+.SearchIcon{
+    margin-left: -30px; /* Move the icon to the left to overlap with the input */
+    position: relative; /* Use relative positioning to adjust the icon's position */
+    cursor: pointer;
+}
+.TextRectangle{
+    color: white;
+}
+.IMDbP{
+    display: flex;
+}
+.IMDbP p{
+    font-family: "DM Sans", sans-serif;
+    margin-top: -1px;
+    margin-left: 10px;
+
+}
+.IMDbP img{
+    width: 35px;
+    height: 17px;
+}
+.PngP{
+    display: flex;
+    margin-left: 20px;
+}
+.PngP p{
+    font-family: "DM Sans", sans-serif;
+    margin-top: -1px;
+    margin-left: 10px; 
+}
+.DescriptionBox{
+    width: 404px;
+    height: 285px;
+    margin-top: 70px;
+    margin-left: 150px;
+    gap: 16px;
+
+}
+.PngP img{
+    width: 16px;
+    height: 17px;
+}
+.IMDbP-PngP{
+    display: flex;
+}
+.JohnText p{
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.watchButton{
+    width: 169px;
+    height: 36px;
+    padding: 6px 16px;
+    border-radius: 6px;
+    gap: 8px;
+    background: #BE123C;
+    color: white;
+    border: none;
+    margin-right: 50px;
+    margin-top: 10px;
+}
+.playWatch{
+    padding-bottom: 500px;
+}
+.Play{
+    width: 20px;
+    height: 20px;
+    margin-right: -20px;
+    position: relative;
+    margin-bottom: -5px;
+}
+.RectangleP{
+    /* display: flex;
+    margin-top: 50px;
+    width: 36px;
+    height: 110px; */
+    margin-top: 150px;
+    margin-right: 30px;
+}
+.Rectangle{
+    position: absolute;
+    margin-top: 91px;
+    margin-left: -25px;
+}
+.FeatureContainer{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 40px;
+}
+.FeaturedSee h2{
+    font-family: "DM Sans", sans-serif;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5%;
+  }
+  
+  .item {
+    width: 250px;
+    height: 490px;
+  }
+  .FeaturedSee{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 3%;
+  }
+  a{
+    color: #BE123C;
+  }
+  .moreIcon img{
+    margin-bottom: -5px;
+    margin-left: 10px;
+  }
+  .Date{
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    color:#9CA3AF;
+  }
+  .Title{
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  .IMDbP-Card{
+    display: flex;
+}
+.IMDbP-Card p{
+    font-family: "DM Sans", sans-serif;
+    margin-top: 1px;
+    margin-left: 10px;
+    font-size: 12px; 
+
+}
+.IMDbP-Card img{
+    width: 35px;
+    height: 17px;
+}
+.PngP-Card{
+    display: flex;
+    margin-left: 20px;
+}
+.PngP-Card p{
+    font-family: "DM Sans", sans-serif;
+    margin-top: 1px;
+    margin-left: 10px;
+    font-size: 12px; 
+}
+.PngP-Card img{
+    width: 16px;
+    height: 17px;
+}
+#IMDbP-PngP-Card{
+    display: flex;
+    justify-content: space-between;
+}
+.Type{
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    color:#9CA3AF;
+}
+footer{
+    margin-top: 30%;
+}
+.FIXY{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.instagram, .x, .youTube{
+    margin-left: 30px;
+}
+.CPP{
+    display: flex;
+    justify-content: center;
+}
+.CPP p{
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+}
+.privacy, .press{
+    margin-left: 30px;
+    color: #111827;
+}
+.copywrite{
+    color: #6B7280;
+    text-align: center;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    padding-bottom: 50px;
+}
