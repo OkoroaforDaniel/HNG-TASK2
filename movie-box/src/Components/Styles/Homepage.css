@@ -1,5 +1,5 @@
 .background-container{
-    background-image: url('../assets/Poster.png');
+    background-image: url('/public/assets/images/Poster.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -57,6 +57,7 @@
     border: solid 
     #D1D5DB 1px;
     background: transparent;
+    color: white;
 }
 .SearchInput::placeholder{
     color: #D1D5DB;
@@ -270,4 +271,25 @@ footer{
     font-family: "DM Sans", sans-serif;
     font-weight: 700;
     padding-bottom: 50px;
+}
+.posterImg{
+    width: 250px;
+    height: 370px;
+}
+.SearchList{
+    position: absolute;
+    background-color: rgb(249, 247, 247);
+    border-radius: 20px;
+}
+.SearchList p{
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    margin: 20px;
+}
+.LinkDiv{
+    text-decoration: none;
+    color: #6B7280;
+}
+a{
+    text-decoration: none;
 }

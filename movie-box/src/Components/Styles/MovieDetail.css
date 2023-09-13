@@ -1,0 +1,171 @@
+.MovieBoxProjection{
+    display: flex;
+}
+.tv{
+    display: flex;
+}
+.tv p{
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "DM Sans", sans-serif;
+
+}
+.Home{
+    display: flex;
+    margin-top: 80px;
+}
+.Movies{
+    display: flex;
+    margin-top: 50px;
+}
+.TvSeries{
+    display: flex;
+    margin-top: 50px;
+}
+.Calander{
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.LogOut{
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.MovieBox{
+    border: solid rgb(218, 216, 216) 1px;
+    border-radius: 0px 30px 30px 0px;
+    margin: 30px;
+    padding: 20px;
+}
+.MovieIcon{
+    width: 25px;
+    height: 25px;
+}
+.MovieText{
+    font-family: "DM Sans", sans-serif;
+    margin-left: 10px;
+    margin-top: 4px;
+    color: #666666;
+}
+.Text{
+    font-family: "DM Sans", sans-serif;
+    border: solid #BE123C 1px;
+    background-color: #F8E7EB;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: small;
+    width: 170px;
+    height: 210px;
+}
+.ActionDramaDiv{
+    display: flex;
+    font-family: "DM Sans", sans-serif;
+}
+.Action{
+    color: #BE123C;
+    background-color: white;
+    border: solid #F8E7EB 1px;
+    border-radius: 15px;
+    width: 84px;
+    height: 30px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.Drama{
+    color: #BE123C;
+    background-color: white;
+    border: solid #F8E7EB 1px;
+    border-radius: 15px;
+    width: 84px;
+    height: 30px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.ActionDramaP{
+    font-size: larger;
+}
+.LongText{
+    color: #666666;
+    font-family: "DM Sans", sans-serif;
+    line-height: 30px;
+    width: 774px;
+    height: 90px;
+}
+.span{
+    color: #BE123C;
+}
+.PSpan{
+    color: #666666;
+    font-family: "DM Sans", sans-serif;
+}
+.TopButton{
+    border-radius: 10px;
+    background-color: #BE123C;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+.buttonAward{
+    display: flex;
+}
+.BelowTrailer{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.Rectangle37Div{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+}
+.Rectangle29{
+    width: 1198px;
+    height: 449px;
+}
+.buttonAward{
+    border: #d3d1d1 solid 1px;
+    border-radius: 10px;
+}
+.buttonAwardP{
+    margin-left: 20px;
+}
+.showTime{
+    background-color: #BE123C;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.Option{
+    background-color: #F8E7EB;
+    color: black;
+    padding: 10px;
+    border: #BE123C solid 1px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.starRate{
+    display: flex;
+    justify-content: right;
+}
+.Rate{
+    color: #E8E8E8;
+    margin-top: 5px;
+    margin-left: 10px;
+    font-weight: 500;
+    font-size: 20px;
+}
+.num{
+    color: #666666;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.Pojection{
+    margin-top: 50px;
+}

@@ -1,10 +1,17 @@
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Homepage from './Components/Homepage';
+import MovieDetail from './Components/MovieDetail';
 
 function App() {
   return (
     <div className="App">
-    <Homepage />
+        <Router>
+          <Routes>
+              <Route path='/' element={<Homepage />}></Route>
+              <Route path="/movies/:id" element={<MovieDetail />} />
+          </Routes>
+    </Router>
     </div>
   );
 }
