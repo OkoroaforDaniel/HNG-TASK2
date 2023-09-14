@@ -169,3 +169,104 @@
 .Pojection{
     margin-top: 50px;
 }
+.BelowTrailer2{
+    display: none;
+}
+@media (max-width: 1000px) {
+    .MovieBox p{
+        visibility: hidden;
+    }
+    .Home p{
+        visibility: hidden;
+    }
+    .Movies p{
+        visibility: hidden;
+    }
+    .LogOut{
+        margin-top: -200px;
+    }
+    .LogOut p{
+        visibility: hidden;
+    }
+    .TvSeries p{
+        visibility: hidden;
+    }
+    .Calander p{
+        visibility: hidden;
+    }
+    .Text{
+        visibility: hidden;
+    }
+    .MovieBox{
+        width: 40px;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+    .Rectangle29{
+        width: 280px;
+        height: 280px;
+        border-radius: 10px;
+        margin-left: -15px;
+        margin-top: -20px;
+    }
+    .BelowTrailer{
+        display: none;
+    }
+    .BelowTrailer2{
+        font-size: 12px;
+        font-family: "DM Sans", sans-serif;
+    }
+    .BelowTrailer2 p{
+        font-size: 12px;
+        font-family: "DM Sans", sans-serif;
+    }
+    .BelowTrailer2{
+        display: block;
+    }
+    .ActionDramaDiv2{
+        display: flex;
+        font-family: "DM Sans", sans-serif;
+    }
+    .Action2{
+        color: #BE123C;
+        background-color: white;
+        border: solid #F8E7EB 1px;
+        border-radius: 10px;
+        width: 84px;
+        height: 20px;
+        margin-left: 5px;
+        margin-top: 10px;
+    }
+    .Drama2{
+        color: #BE123C;
+        background-color: white;
+        border: solid #F8E7EB 1px;
+        border-radius: 10px;
+        width: 84px;
+        height: 20px;
+        margin-left: 5px;
+        margin-top: 10px;
+    }
+    .ActionDramaP2{
+        font-size: larger;
+    }
+    .LongText2{
+        color: #666666;
+        font-family: "DM Sans", sans-serif;
+        line-height: 30px;
+    }
+    .span2{
+        color: #BE123C;
+    }
+    .PSpan2{
+        color: #666666;
+        font-family: "DM Sans", sans-serif;
+    }
+    .TopButton2{
+        border-radius: 10px;
+        background-color: #BE123C;
+        color: white;
+        border: none;
+        padding: 10px;
+    }
+}

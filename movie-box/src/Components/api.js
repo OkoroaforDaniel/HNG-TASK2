@@ -27,28 +27,15 @@ export const searchMoviesByTitle = async (query) => {
   }
 };
 
-export const fetchMovieTrailers = async (movieId) => {
-  try {
-    const response = await fetch(
-      `https://api.themoviedb.org/3/movie/movie_id/videos?api_key=${apiKey}&language=en-US`
-    );
-    const data = await response.json();
-
-    console.log(data);
-
-    return data.results;
-  } catch (error) {
-    throw error;
-  }
-};
-
 export const fetchMovieDetails = async (movieId) => {
   try {
     const response = await fetch(
       `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=en-US`
     );
     const data = await response.json();
-    return data;
+
+    console.log(data);
+    return data.results;
   } catch (error) {
     throw error;
   }

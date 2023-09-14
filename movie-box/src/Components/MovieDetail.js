@@ -1,47 +1,21 @@
 import React, { useEffect, useState } from "react";
+import { fetchMovieDetails } from "./api";
+import { useParams } from "react-router-dom";
 
 import "./Styles/MovieDetail.css";
 
-import { fetchMovies, fetchMovieTrailers } from "./api";
-import { useParams } from "react-router-dom";
-
 const MovieDetail = () => {
-  const { id } = useParams();
-  const [movie, setMovie] = useState(null);
-  const [trailers, setTrailers] = useState([]);
-  const [loading, setLoading] = useState(true);
+    const [MovieDetails, setMovieDetails] = useState([]);
 
-  useEffect(() => {
-    setLoading(true);
-
-    // Fetch movie details by ID
-    fetchMovies(id)
-      .then((data) => {
-        setMovie(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error(error);
-        setLoading(false);
-      });
-
-    // Fetch movie trailers by ID
-    fetchMovieTrailers(id)
-      .then((data) => {
-        setTrailers(data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }, [id]);
-
-  if (loading) {
-    return <p>Loading movie details...</p>;
-  }
-
-  if (!movie) {
-    return <p>Movie not found.</p>;
-  }
+    useEffect(() => {
+        // Fetch top movies when the component mounts
+        fetchMovieDetails()
+          .then((movies) => {
+            const topMovies = movies;
+            setMovieDetails(topMovies);
+          })
+          .catch((error) => console.error(error));
+      }, []);
 
   return (
     <div className="MovieBoxProjection">
@@ -73,7 +47,7 @@ const MovieDetail = () => {
         <div className="Calander">
           <img
             className="MovieIcon"
-            src="/assets/imagesCalendar.png"
+            src="/assets/images/Calendar.png"
             alt="Calander"
           />
           <p className="MovieText">Upcomming</p>
@@ -104,17 +78,9 @@ const MovieDetail = () => {
       </div>
 
       <div className="Pojection">
-        {trailers && trailers.length > 0 && (
-          <iframe
-            className="Rectangle29"
-            src={`https://www.youtube.com/embed/${trailers[0].key}`}
-            title="Trailer"
-            frameBorder="0"
-            allowFullScreen
-          />
-        )}
-        ;
-        {/* <img className='Rectangle29' src={Rectangle29} alt='Rectangle29' /> */}
+      
+        <img className='Rectangle29'  src='/assets/images/Rectangle 29.png' alt='Rectangle29' />
+
         <div className="BelowTrailer">
           <div>
             <div className="ActionDramaDiv">
@@ -168,6 +134,47 @@ const MovieDetail = () => {
             <img src="/assets/images/Rectangle 37.png" alt="Rectangle37" />
           </div>
         </div>
+
+        <div className="BelowTrailer2">
+            <div className="ActionDramaDiv2">
+              <p className="ActionDramaP2">
+                Top Gun: Maverick • 2022 • PG-13 • 2h 10m
+              </p>
+              <button className="Action2">Action</button>
+              <button className="Drama2">Drama</button>
+            </div>
+            <div className="LongText2">
+              After thirty years, Maverick is still pushing the envelope as a
+              top naval aviator,
+              <br />
+              but must confront ghosts of his past when he leads TOP GUN's elite
+              graduates
+              <br />
+              on a mission that demands the ultimate sacrifice from those chosen
+              to fly it.
+            </div>
+            <div className="PSpan2">
+              <p>
+                Director : <span className="span2">Joseph Kosinski</span>
+              </p>
+              <p>
+                Writers :{" "}
+                <span className="span2">
+                  Jim Cash, Jack Epps Jr, Peter Craig
+                </span>
+              </p>
+              <p>
+                Stars :{" "}
+                <span className="span2">
+                  Tom Cruise, Jennifer Connelly, Miles Teller
+                </span>
+              </p>
+            </div>
+            <div className="buttonAward2">
+              <button className="TopButton2">Top Rated Movie #65</button>
+            </div>
+          </div>
+
       </div>
     </div>
   );

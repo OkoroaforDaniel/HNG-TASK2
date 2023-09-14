@@ -3,6 +3,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    width: 100vw;
 }
 .JohnWickH1 h1{
     font-family: "DM Sans", sans-serif;
@@ -17,6 +18,8 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 200px;
+    width: 100%;
+    
 }
 .NavBar{
     display: flex;
@@ -138,10 +141,6 @@
     margin-bottom: -5px;
 }
 .RectangleP{
-    /* display: flex;
-    margin-top: 50px;
-    width: 36px;
-    height: 110px; */
     margin-top: 150px;
     margin-right: 30px;
 }
@@ -153,18 +152,23 @@
 .FeatureContainer{
     display: flex;
     flex-direction: column;
-    margin-left: 10%;
-    margin-right: 10%;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    /* margin-left: 5%;
+    margin-right: 5%; */
     margin-top: 40px;
 }
 .FeaturedSee h2{
     font-family: "DM Sans", sans-serif;
+    margin-top: -5px;
 }
 .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 5%;
+    gap: 8%;
+    margin-left: -240px;
   }
   
   .item {
@@ -174,7 +178,8 @@
   .FeaturedSee{
     display: flex;
     justify-content: space-between;
-    margin-right: 3%;
+    width: 1240px;
+    /* margin-right: 3%; */
   }
   a{
     color: #BE123C;
@@ -296,8 +301,6 @@ a{
 .posterContainer {
     position: relative;
   }
-  
-  
   .container1 {
     position: absolute;
     top: 0;
@@ -305,4 +308,140 @@ a{
     z-index: 2;
     margin-top: 10px;
     margin-right: 10px;
+  }
+  /* footer {
+    bottom: 0;
+    margin-top: 100vh;
+  } */
+
+  @media (max-width: 1220px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-rows: repeat(3, 1fr); */
+        gap: 10%;
+        margin-left: -150px;
+      }
+      .SearchInput{
+        width: 300px;
+      }
+      .FeaturedSee{
+        display: flex;
+        justify-content: space-between;
+        width: 900px;
+      }
+      .moreIcon{
+        margin-left: 500px;
+      }
+      footer {
+        bottom: 0;
+        margin-top: 100vh;
+      }
+  }
+  @media (max-width: 873px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10%;
+        margin-left: -50px;
+      }
+      .FeaturedSee{
+        display: flex;
+        justify-content: space-between;
+        width: 550px;
+      }
+      .moreIcon{
+        margin-left: -50px;
+      }
+      .SearchInput{
+        visibility: hidden;
+      }
+      .SearchIcon{
+        visibility: hidden;
+      }
+      footer {
+        /* bottom: 0; */
+        padding-top: 100%;
+      }
+
+  }
+
+
+  @media (max-width: 600px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        /* grid-template-rows: repeat(3, 1fr); */
+        gap: 4%;
+        margin-left: 10px;
+      }
+      .FeaturedSee{
+        display: flex;
+        justify-content: space-between;
+        width: 250px;
+        margin-left: 0px;
+        margin-bottom: 20px;
+      }
+      .moreIcon{
+        margin-left: -80px;
+        font-size: 15px;
+        margin-top: -5px;
+      }
+      .FeaturedSee h2{
+        font-size: 18px;
+      }
+      .SearchInput{
+        width: 100px;
+      }
+      .tvMovie{
+        width: 50p;
+        height: 20px;
+      }
+      .tv{
+        width: 30px;
+        height: 30px;
+      }
+      .tvMovie p{
+        font-size: 15px;
+        margin-left: 2px;
+        margin-top: 5px;
+      }
+      .signMenu p{
+        font-size: 15px;
+        margin-right: 5px;
+        margin-top: 5px;
+      }
+      .Menu{
+        width: 30px;
+        height: 30px;
+      }
+      .item {
+        display: flex;
+        flex-direction: column; /* Stack the child elements vertically */
+        align-items: center; /* Center horizontally */
+        justify-content: center; /* Center vertically */
+        text-align: center; /* Center the text content */
+      }
+      .SearchInput{
+        visibility: hidden;
+      }
+      .SearchIcon{
+        visibility: hidden;
+      }
+      .DescriptionBox{
+        width: 404px;
+        height: 285px;
+        margin-top: 70px;
+        margin-left: 50px;
+        gap: 16px;
+    
+    }
+    .JohnWickH1 h1{
+        font-size: 30px;
+    }
+    footer {
+        /* bottom: 0; */
+        padding-top: 250%;
+      }
+
   }
