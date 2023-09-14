@@ -293,3 +293,16 @@ footer{
 a{
     text-decoration: none;
 }
+.posterContainer {
+    position: relative;
+  }
+  
+  
+  .container1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
