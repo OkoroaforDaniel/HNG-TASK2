@@ -92,6 +92,7 @@
     line-height: 30px;
     width: 774px;
     height: 90px;
+    margin-bottom: 50px;
 }
 .span{
     color: #BE123C;
@@ -123,6 +124,9 @@
 .Rectangle29{
     width: 1198px;
     height: 449px;
+
+
+    border-radius: 20px;
 }
 .buttonAward{
     border: #d3d1d1 solid 1px;
@@ -172,7 +176,8 @@
 .BelowTrailer2{
     display: none;
 }
-@media (max-width: 1000px) {
+
+@media (max-width: 800px) {
     .MovieBox p{
         visibility: hidden;
     }
@@ -187,6 +192,122 @@
     }
     .LogOut p{
         visibility: hidden;
+    }
+    .LogOut{
+        margin-bottom: 250px;
+    }
+    .TvSeries p{
+        visibility: hidden;
+    }
+    .Calander p{
+        visibility: hidden;
+    }
+    .Text{
+        visibility: hidden;
+    }
+    .MovieBox{
+        width: 40px;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+    .Rectangle29{
+        width: 500px;
+        height: 300px;
+        border-radius: 10px;
+        /* margin-left: 15px; */
+        margin-top: -20px;
+    }
+    .BelowTrailer{
+        display: none;
+    }
+    .BelowTrailer2{
+        font-size: 12px;
+        font-family: "DM Sans", sans-serif;
+    }
+    .BelowTrailer2 p{
+        font-size: 12px;
+        font-family: "DM Sans", sans-serif;
+    }
+    .BelowTrailer2{
+        display: block;
+    }
+    .ActionDramaDiv2{
+        display: flex;
+        font-family: "DM Sans", sans-serif;
+        width: 500px;
+    }
+    .Action2{
+        color: #BE123C;
+        background-color: white;
+        border: solid #F8E7EB 1px;
+        border-radius: 10px;
+        width: 84px;
+        height: 20px;
+        margin-left: 5px;
+        margin-top: 10px;
+    }
+    .Drama2{
+        color: #BE123C;
+        background-color: white;
+        border: solid #F8E7EB 1px;
+        border-radius: 10px;
+        width: 84px;
+        height: 20px;
+        margin-left: 5px;
+        margin-top: 10px;
+    }
+    .ActionDramaP2{
+        font-size: larger;
+        font-size: 15px;
+    }
+    .LongText2{
+        color: #666666;
+        font-family: "DM Sans", sans-serif;
+        line-height: 30px;
+        font-size: 15px;
+        width: 500px;
+    }
+    .span2{
+        color: #BE123C;
+    }
+    .PSpan2{
+        color: #666666;
+        font-family: "DM Sans", sans-serif;
+    }
+    .TopButton2{
+        border-radius: 10px;
+        background-color: #BE123C;
+        color: white;
+        border: none;
+        padding: 10px;
+    }
+    .ActionDrama2{
+        margin-top: 5px;
+    }
+    .spanB{
+        margin-left: 5px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .MovieBox p{
+        visibility: hidden;
+    }
+    .Home p{
+        visibility: hidden;
+    }
+    .Movies p{
+        visibility: hidden;
+    }
+    .LogOut{
+        margin-top: -200px;
+    }
+    .LogOut p{
+        visibility: hidden;
+    }
+    .LogOut{
+        margin-bottom: 250px;
     }
     .TvSeries p{
         visibility: hidden;
@@ -225,7 +346,9 @@
     }
     .ActionDramaDiv2{
         display: flex;
+        flex-direction: row;
         font-family: "DM Sans", sans-serif;
+        width: 260px;
     }
     .Action2{
         color: #BE123C;
@@ -254,9 +377,12 @@
         color: #666666;
         font-family: "DM Sans", sans-serif;
         line-height: 30px;
+        font-size: 12px;
+        width: 300px;
     }
     .span2{
         color: #BE123C;
+        font-size: 12px;
     }
     .PSpan2{
         color: #666666;
@@ -270,3 +396,5 @@
         padding: 10px;
     }
 }
+
+

@@ -90,10 +90,17 @@
     display: flex;
     margin-left: 20px;
 }
+.IMDbP-Card p{
+    color: #9CA3AF;
+}
+.PngP-Card p{
+    color: #9CA3AF;
+}
 .PngP p{
     font-family: "DM Sans", sans-serif;
     margin-top: -1px;
     margin-left: 10px; 
+    color: #9CA3AF;
 }
 .DescriptionBox{
     width: 404px;
@@ -109,6 +116,7 @@
 }
 .IMDbP-PngP{
     display: flex;
+    color: #9CA3AF;
 }
 .JohnText p{
     font-family: "DM Sans", sans-serif;
@@ -119,25 +127,24 @@
     text-align: left;
 }
 .watchButton{
-    width: 169px;
-    height: 36px;
-    padding: 6px 16px;
+    /* width: 169px;
+    height: 36px; */
+    padding: 20px;
     border-radius: 6px;
-    gap: 8px;
     background: #BE123C;
     color: white;
     border: none;
-    margin-right: 50px;
+    margin-left: 0px;
     margin-top: 10px;
 }
 .playWatch{
     padding-bottom: 500px;
 }
 .Play{
+    position: relative;
     width: 20px;
     height: 20px;
     margin-right: -20px;
-    position: relative;
     margin-bottom: -5px;
 }
 .RectangleP{
@@ -155,8 +162,6 @@
     align-items: center;
     justify-content: center;
     width: 100vw;
-    /* margin-left: 5%;
-    margin-right: 5%; */
     margin-top: 40px;
 }
 .FeaturedSee h2{
@@ -199,6 +204,7 @@
   }
   .Title{
     font-family: "DM Sans", sans-serif;
+    color: #6B7280;
     font-size: 18px;
     font-weight: 700;
     line-height: 23px;
@@ -301,7 +307,7 @@ a{
 .posterContainer {
     position: relative;
   }
-  .container1 {
+.container1 {
     position: absolute;
     top: 0;
     right: 0;
@@ -309,10 +315,10 @@ a{
     margin-top: 10px;
     margin-right: 10px;
   }
-  /* footer {
-    bottom: 0;
-    margin-top: 100vh;
-  } */
+  #container1Colored{
+    /* filter: hue-rotate(300deg) brightness(0.5); */
+    filter: saturate(10);
+  }
 
   @media (max-width: 1220px) {
     .container {
@@ -443,5 +449,7 @@ a{
         /* bottom: 0; */
         padding-top: 250%;
       }
-
+      .CPP p{
+        font-size: 12px;
+      }
   }

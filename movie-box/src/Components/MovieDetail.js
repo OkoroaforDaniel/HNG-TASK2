@@ -1,21 +1,30 @@
 import React, { useEffect, useState } from "react";
 import { fetchMovieDetails } from "./api";
 import { useParams } from "react-router-dom";
+import axios from "axios";
 
 import "./Styles/MovieDetail.css";
 
 const MovieDetail = () => {
-    const [MovieDetails, setMovieDetails] = useState([]);
+const apiKey = "d32887614372de0e302f4cb7777fead8";
 
-    useEffect(() => {
-        // Fetch top movies when the component mounts
-        fetchMovieDetails()
-          .then((movies) => {
-            const topMovies = movies;
-            setMovieDetails(topMovies);
-          })
-          .catch((error) => console.error(error));
-      }, []);
+const dateString = (date) => {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return new Date(date).toLocaleDateString(undefined, options);
+  };
+
+  const { movieId } = useParams();
+
+const[movieDetail, setMovieDetail] = useState(null);
+const getDetails = async()=>{
+const response = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`);
+setMovieDetail(response.data)
+console.log(response.data)
+}
+useEffect(()=>{
+     getDetails();
+}, [])
+
 
   return (
     <div className="MovieBoxProjection">
@@ -78,27 +87,38 @@ const MovieDetail = () => {
       </div>
 
       <div className="Pojection">
-      
-        <img className='Rectangle29'  src='/assets/images/Rectangle 29.png' alt='Rectangle29' />
+        {/* <img className='Rectangle29'  src='/assets/images/Rectangle 29.png' alt='Rectangle29' /> */}
+        {movieDetail && movieDetail.poster_path ? (
+          <img
+            className="Rectangle29"
+            src={`https://image.tmdb.org/t/p/w500${movieDetail.poster_path}`}
+            alt="Movie Poster"
+          />
+            ) : (
+            <p>No poster available</p>
+            )}
 
-        <div className="BelowTrailer">
-          <div>
-            <div className="ActionDramaDiv">
-              <p className="ActionDramaP">
-                Top Gun: Maverick • 2022 • PG-13 • 2h 10m
+                    <div className="BelowTrailer">
+                    <div>
+                    {movieDetail && movieDetail.title ? (
+                <div>
+                <div className="ActionDramaDiv">
+                <div className="3span">
+                <p className="ActionDramaP">
+              <span>{movieDetail.title}</span>
+              <span>{dateString(movieDetail.release_date)}</span>
+              <span>{movieDetail.runtime}</span>
               </p>
+                </div>
+
+              <div className="ActionDrama">
               <button className="Action">Action</button>
               <button className="Drama">Drama</button>
+              </div>
+
             </div>
             <div className="LongText">
-              After thirty years, Maverick is still pushing the envelope as a
-              top naval aviator,
-              <br />
-              but must confront ghosts of his past when he leads TOP GUN's elite
-              graduates
-              <br />
-              on a mission that demands the ultimate sacrifice from those chosen
-              to fly it.
+            <span>{movieDetail.overview}</span>
             </div>
             <div className="PSpan">
               <p>
@@ -121,6 +141,11 @@ const MovieDetail = () => {
               <button className="TopButton">Top Rated Movie #65</button>
               <p className="buttonAwardP">Award 9 nominations</p>
             </div>
+                
+                </div>
+                ) : (
+                <p>Loading...</p>
+                )}
           </div>
 
           <div className="Rectangle37Div">
@@ -136,22 +161,25 @@ const MovieDetail = () => {
         </div>
 
         <div className="BelowTrailer2">
-            <div className="ActionDramaDiv2">
-              <p className="ActionDramaP2">
-                Top Gun: Maverick • 2022 • PG-13 • 2h 10m
+                {movieDetail && movieDetail.title ? (
+                <div>
+                <div className="ActionDramaDiv2">
+                <div className="3span2">
+                <p className="ActionDramaP2">
+              <span className="spanA">{movieDetail.title}</span>
+              <span className="spanB">{dateString(movieDetail.release_date)}</span>
+              <span className="spanC">{movieDetail.runtime}</span>
               </p>
+                </div>
+
+              <div className="ActionDrama2">
               <button className="Action2">Action</button>
               <button className="Drama2">Drama</button>
+              </div>
+
             </div>
             <div className="LongText2">
-              After thirty years, Maverick is still pushing the envelope as a
-              top naval aviator,
-              <br />
-              but must confront ghosts of his past when he leads TOP GUN's elite
-              graduates
-              <br />
-              on a mission that demands the ultimate sacrifice from those chosen
-              to fly it.
+            <span>{movieDetail.overview}</span>
             </div>
             <div className="PSpan2">
               <p>
@@ -172,9 +200,50 @@ const MovieDetail = () => {
             </div>
             <div className="buttonAward2">
               <button className="TopButton2">Top Rated Movie #65</button>
+              <p className="buttonAwardP2">Award 9 nominations</p>
             </div>
+                
+                </div>
+                ) : (
+                <p>Loading...</p>
+                )}
           </div>
 
+        {/* <div className="BelowTrailer2">
+          <div className="ActionDramaDiv2">
+            <p className="ActionDramaP2">
+            <span>{movieDetail.title}</span>
+              <span>{dateString(movieDetail.release_date)}</span>
+              <span>{movieDetail.runtime}</span>
+            </p>
+            <div>
+            <button className="Action2">Action</button>
+            <button className="Drama2">Drama</button>
+            </div>
+
+          </div>
+          <div className="LongText2">
+          <span>{movieDetail.overview}</span>
+          </div>
+          <div className="PSpan2">
+            <p>
+              Director : <span className="span2">Joseph Kosinski</span>
+            </p>
+            <p>
+              Writers :{" "}
+              <span className="span2">Jim Cash, Jack Epps Jr, Peter Craig</span>
+            </p>
+            <p>
+              Stars :{" "}
+              <span className="span2">
+                Tom Cruise, Jennifer Connelly, Miles Teller
+              </span>
+            </p>
+          </div>
+          <div className="buttonAward2">
+            <button className="TopButton2">Top Rated Movie #65</button>
+          </div>
+        </div> */}
       </div>
     </div>
   );

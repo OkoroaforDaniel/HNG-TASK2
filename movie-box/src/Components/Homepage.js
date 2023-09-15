@@ -9,11 +9,26 @@ const Homepage = () => {
   const [query, setQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [isRedBackground, setIsRedBackground] = useState(false);
+  const [isColored, setIsColored] = useState(false);
+  const [activeCardIndex, setActiveCardIndex] = useState(-1);
 
-  const changeBackgroundColor = () => {
-    setIsRedBackground(!isRedBackground); // Toggle the background color
+    // const toggleRedImage = (event) => {
+    //   event.preventDefault();
+    //   setIsColored(!isColored);
+
+    // };
+
+  const toggleRedImage = (event, index) => {
+    event.preventDefault();
+    setIsColored(!isColored);
+    setActiveCardIndex(index);
   };
+
+  const imageClassName = (index) => {
+    return index === activeCardIndex ? "container1Colored" : "container1";
+  };
+
+  //   const imageClassName = isColored ? 'container1Colored' : 'container1';
 
   const handleSearch = (newQuery) => {
     // Set the query in the state immediately
@@ -160,18 +175,9 @@ const Homepage = () => {
         <div class="container">
           {/* <img className="favorite" id="changeBackground" src="/assets/images/Favorite.png" alt="favorite" /> */}
 
-          {Movies.map((movie) => (
+          {Movies.map((movie, index) => (
             <>
-              <img
-                className="container1"
-                src="/assets/images/Favorite.png"
-                alt="favorite"
-                onClick={() => {
-                  changeBackgroundColor();
-                }}
-              />
-
-              <Link className="LinkDiv" to="/movies/${movie.id}" key={movie.id}>
+              <Link to={`/movies/${movie.id}`} key={movie.id}>
                 <div class="item" data-testid="movie-card">
                   <div className="posterContainer">
                     <img
@@ -180,14 +186,15 @@ const Homepage = () => {
                       src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                     />
 
-                <img
-                    className="container1"
-                    src="/assets/images/Favorite.png"
-                    alt="favorite"
-                    onClick={() => {
-                    changeBackgroundColor();
-                    }}
-                />
+                    <img
+                      id={imageClassName(index)}
+                      className="container1"
+                      src="/assets/images/Favorite.png"
+                      alt="favorite"
+                      onClick={(event) => {
+                        toggleRedImage(event, index);
+                      }}
+                    />
                   </div>
 
                   <p className="Date" data-testid="movie-release-date">
